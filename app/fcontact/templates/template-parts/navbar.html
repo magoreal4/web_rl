@@ -1,0 +1,55 @@
+{% load static %}
+<nav class='nav bg-transparent text-white sticky top-0 z-50'>
+        <div class="container mx-auto xl:px-32 lg:px-16 px-2">
+            <div class='flex justify-between'>
+                
+                    <!-- logo -->
+                    <div class='mr-2'>
+                        <a href="{% url 'Home' %}" class='flex items-center py-4 px-3 h-14'>
+                            <img src="{% static 'images/RL_logo.png' %}" width="120" >
+                        </a>
+                    </div>
+                    <!-- primary -->
+                    <div class='hidden md:flex items-center space-x-1'>
+                        <a href="{% url 'Servicios' %}" class="text-shadow-black {% if request.path == '/servicios/' %} text-red-500{% endif %} py-4 px-3 hover:text-red-500">SERVICIOS</a>
+                        <a href="{% url 'contacto:ContactForm' %}" class="text-shadow-black {% if request.path == '/contact/' %} text-red-500{% endif %} py-4 px-3 hover:text-red-500">CONTACTANOS</a>
+                    </div>
+                    
+                
+                <!-- secondary -->
+                <div class='text-shadow-black hidden md:flex items-center space-x-1'>
+                    <a href="#" class='py-4 px-3 hover:text-gray-900'>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" filter="drop-shadow(3px 5px 2px black)">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+                        </svg>  
+                    </a>
+                    <a href="#" class='py-4 px-3 hover:text-gray-900'>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" filter="drop-shadow(3px 5px 2px black)">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                          </svg>
+                    </a>
+
+                    <button class='text-shadow-black mode-button px-3'>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" filter="drop-shadow(3px 5px 2px black)" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                        </svg>
+                    </button>
+                </div>
+                <!-- mobile button -->
+                <button class='hamburger md:hidden flex items-center'>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hover:text-indigo-600 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <!-- mobile menu -->
+    <div class='mobile-menu absolute w-full transform scale-y-0 origin-top transition-all bg-gray-200 md:hidden z-20'>
+      <ul class="list-none mx-auto">
+        {% comment %} <li><a href="{% url 'Servicios' %}" class='block px-8 py-3 text-gray-600 hover:text-gray-900 hover:bg-gray-100'>Servicios</a></li>
+        <li><a href="{% url 'Clientes' %}" class='block px-8 py-3 text-gray-600 hover:text-gray-900 hover:bg-gray-100'>Clientes</a></li>
+        <li><a href="{% url 'Contacto' %}" class='block px-8 py-3 text-gray-600 hover:text-gray-900 hover:bg-gray-100'>Contacto</a></li> {% endcomment %}
+        
+      </ul>
+    </div>

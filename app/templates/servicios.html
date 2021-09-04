@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% for servicio in servicios %}
+        <div id="{{ servicio.titulo }}" class="z-10 container">
+                <div class="relative flex items-center justify-center text-justify">  
+                        <img class='h-screen/4 md:h-screen/3 xl:h-screen/2 rounded-3xl w-full object-cover filter saturate-50 opacity-50' src="{{ servicio.imagen.url }}" ></img>
+                        <h2 class='xl:mt-16 sm:px-24 z-10 lg:tracking-wider md:max-w-md absolute text-3xl text-center text-white text-shadow-red mb-6'>{{ servicio.titulo }}</h2>
+                        <svg class='absolute bottom-0' xmlns="http: //www.w3.org/2000/svg" 
+                        viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 35%; width: 100%;">                                
+                                <path d="M0.28,150.48 C197.80,-36.02 303.33,-37.00 499.15,152.45 L499.72,149.50 L241.82,150.48 Z"; fill="#1f2937"; fill-opacity="1.0"></path>
+                                
+                        </svg>
+                        
+                </div>
+        </div> 
+        <p class="relative lg:max-w-screen-lg md:max-w-screen-md mx-auto text-white px-8 md:px-28 lg:px-36 text-justify -mt-8 sm:-mt-8 xl:-mt-24 "> {{ servicio.contenido }} </p> 
+  <hr class="hr-1">
+            
+{% endfor %}
+{% endblock content %}

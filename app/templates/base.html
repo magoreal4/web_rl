@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/banner.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/aos.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/marquee.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/footer.css' %}"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css'>
+    <title>{{ title }}</title>
+</head>
+<body class="bg-gray-800">
+
+  {% include "template-parts/navbar.html" %}
+    
+<!-- Content Dinamico-->
+  {% block content %}
+
+  {% endblock %}
+
+<!-- Footer Dinamico-->
+{% include "template-parts/footer.html" %}
+
+
+    <script src="{% static 'js/jquery-3.6.0.min.js' %}" ></script>
+    <script src="{% static 'js/banner.js' %}" ></script>
+    <script src="{% static 'js/main.js' %}" ></script>
+    <script src="{% static 'js/aos.js' %}" ></script>
+    <script src="{% static 'js/marquee.js' %}" ></script>
+    
+
+</body>
+</html>

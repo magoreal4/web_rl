@@ -1,0 +1,8 @@
+    <h2 class="text-center text-white mb-2">NUESTROS CLIENTES</h2>
+    <div class="marquee mx-auto">
+      <ul class="marquee-content">
+      {% for clientes in logos %}  
+        <li><img class='filter brightness-200 grayscale my-12 object-contain h-full border-none' src="{{ clientes.imagen.url }}" ></img></li>
+      {% endfor %}
+      </ul>
+    </div>

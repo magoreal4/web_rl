@@ -1,0 +1,15 @@
+
+
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container max-w-md text-white text center my-12">
+
+<form method="post">
+   {% csrf_token %}
+    {{ form.as_p}}
+        <input class="uppercase text-sm font-bold tracking-wide bg-red-600 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline" type="submit" value="Enviar mensaje">
+</form>
+</div>
+   
+{% endblock  %}

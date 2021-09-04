@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <!-- Content -->
+    <div id="banner" class="container bg-gray-800 text-white font-nunito relative max-h-screen h-screen600 lg:h-screen600 2xl:h-screen1000 xl:h-screen800 -mt-14 overflow-hidden">
+        {% for slide in banner %}  
+        
+        <div class="slide">
+            <img class='absolute object-cover w-full h-full opacity-0 ' src="{{ slide.imagen.url }}" ></img>
+            <h2 class='absolute top-1/4 left-1/2 text-3xl px-6 opacity-0'>{{ slide.titulo }}</h2>
+            <p class="absolute top-2/4 left-1/3 text-lg text-justify w-1/3">{{ slide.contenido }}</p> 
+        </div>
+        {% endfor %}
+    </div>
+    <hr class="hr-1">
+
+    {% include 'template-parts/cards.html' %}
+
+    <hr class="hr-1 mb-1">
+    {% include 'template-parts/logos-clientes.html' %}
+  <hr class="hr-1">
+   
+{% endblock  %}
