@@ -3,7 +3,7 @@ from django.core.validators import FileExtensionValidator
 
 
 class Banner(models.Model):
-    titulo = models.CharField(max_length=20, unique=True)
+    titulo = models.CharField(max_length=25, unique=True)
     contenido = models.TextField(max_length=150)
     imagen = models.ImageField(upload_to='banner')
     visible = models.BooleanField(default=True, verbose_name="¿Visible?")

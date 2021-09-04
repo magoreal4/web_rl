@@ -4,7 +4,8 @@ server {
     # server_name example.com www.example.com;
     server_name localhost;
 
-    location = /favicon.ico { 
+    location = /favicon.ico {
+        alias /home/gonzalo/dj_web_base/app/staticfiles/favicon.ico; 
         access_log off; 
         log_not_found off; 
         }
