@@ -1,4 +1,4 @@
-# /etc/nginx/sites-available/web_base
+# /etc/nginx/sites-available/web_rl
 
 server {
     # server_name example.com www.example.com;
@@ -21,6 +21,6 @@ server {
 
     location / {
         include proxy_params;
-        proxy_pass http://unix:/run/web_base.sock;
+        proxy_pass http://unix:/run/web_rl.sock;
     }
 }

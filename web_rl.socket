@@ -1,10 +1,10 @@
-# /etc/systemd/system/web_base.socket
+# /etc/systemd/system/web_rl.socket
 
 [Unit]
 Description=gunicorn socket
 
 [Socket]
-ListenStream=/run/web_base.sock
+ListenStream=/run/web_rl.sock
 
 [Install]
 WantedBy=sockets.target
