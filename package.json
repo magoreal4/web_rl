@@ -1,0 +1,27 @@
+{
+  "name": "web_rl",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "postcss ./src/tailwind.css -o ./app/static/css/main.css",
+    "build": "NODE_ENV=production postcss ./src/tailwind.css -o ./app/static/css/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/magoreal4/web_rl.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/magoreal4/web_rl/issues"
+  },
+  "homepage": "https://github.com/magoreal4/web_rl#readme",
+  "dependencies": {
+    "@tailwindcss/jit": "^0.1.10",
+    "autoprefixer": "^10.3.4",
+    "postcss-cli": "^8.3.1",
+    "tailwindcss": "^2.2.9"
+  }
+}

@@ -19,3 +19,6 @@ class ServiciosPrestados(ListView):
     template_name = "servicios.html"
     model = Servicios
     context_object_name = "servicios"
+
+class Prueba(TemplateView):
+    template_name = "prueba.html"
