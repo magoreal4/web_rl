@@ -9,8 +9,8 @@ After=network.target
 [Service]
 User=root
 Group=www-data
-WorkingDirectory=/home/gonzalo/web_rl/app
-ExecStart=/home/gonzalo/web_rl/virtual/bin/gunicorn \
+WorkingDirectory=/root/web_rl/app
+ExecStart=/root/web_rl/virtual/bin/gunicorn \
     --access-logfile - \
     --workers 3 \
     --bind unix:/run/web_rl.sock \

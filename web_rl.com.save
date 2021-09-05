@@ -1,8 +1,7 @@
-# /etc/nginx/sites-available/redlinegs
+# /etc/nginx/sites-available/redlinegs.com
 
 server {
     server_name redlinegs.com www.redlinegs.com;
-    
     location = /favicon.ico {
         alias /root/web_rl/app/staticfiles/favicon.ico; 
         access_log off; 
