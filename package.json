@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/magoreal4/web_rl#readme",
   "dependencies": {
-    "@tailwindcss/jit": "^0.1.18",
+    "@tailwindcss/jit": "^0.1.10",
     "autoprefixer": "^10.3.4",
     "postcss-cli": "^8.3.1",
     "tailwindcss": "^2.2.9"
