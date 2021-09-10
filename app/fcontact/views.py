@@ -21,9 +21,6 @@ from django.http import HttpResponse
 
 from .forms import ContactForm
 
-def hola(request):
-	return render(request, "hola.html")
-
 def contact_form(request):
     submitted = False
     # if this is a POST request we need to process the form data
